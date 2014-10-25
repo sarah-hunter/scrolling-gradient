@@ -4,12 +4,58 @@
 	<meta charset="UTF-8">
 	<title>Scrolling Gradient</title>
 	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="animations.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,900' rel='stylesheet' type='text/css'>	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="js/gradientScroll.js"></script>
 	<script src="js/main.js"></script>
 </head>
 <body>
-	<div class="container">	
+	<div class="container">
+		<div class="intro">
+			<h1>Scrolling gradient</h1>
+			<p>A simple way to change the colour of your background when you scroll down the page. You can only add 2 colours at this time.</p>
+			<p>Scroll down to the bottom of the page to view the documentation.</p>
+			<img src="images/down.png" alt="down" class="floating">
+		</div>
+		<div class="image">		
+		</div>
+
+		<div class="doc">
+			<h2>How to use it</h2>
+			<p>1. Link the 'gradientScroll.js' to your HTML file.</p>
+			<p>2. Add your desired CSS to startColour and endColour. The plugin will generate the necessary HTML for you.</p>
+			<pre>
+var startColour = $('&#60div&#62').addClass('.colour1').css({
+	//Add CSS
+	width: 100%;
+	height: 100%;
+});
+		 
+var endColour = $('&#60div&#62').addClass('.colour2').css({
+	//Add CSS
+	width: 100%;
+	height: 100%;
+});
+			</pre>
+			<p>3. If your div's are not a child element of `.container`, change the following to the name of the parent element:</p>
+			<pre>
+$('parent element').append(startColour);
+	
+startColour = $('parent element').children().last();
+		
+$('parent element').append(endColour);
+			</pre>
+			<p>4. In your main javascript file, add the following code to call the function:</p>
+			<pre>
+$(function() {
+	$(document).gradientScroll('colour1', 'colour2');
+});
+			</pre>
+			<p>5. You can pass a HEX value or a RGB / RGBA value. </p>
+			<h3>View on</h3>  <a href="https://github.com/SamChun/scrollling-gradient"><img src="images/github.png" alt="github" class="pulse"></a>
+		</div>
 	</div>
+
 </body>
 </html>

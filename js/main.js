@@ -1,3 +1,3 @@
 $(function() {
-	$(document).gradientScroll('#59ABE3', '#E74C3C');
+	$(document).gradientScroll('#22A7F0', '#F64747');
 });
