@@ -1,4 +1,4 @@
-# Background gradient on scroll
+# Scrolling Gradient
 
 ## Overview
 
