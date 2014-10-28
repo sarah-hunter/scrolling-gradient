@@ -37,3 +37,5 @@ Currently you can only add 2 colours.
 		});
 
 4. You can pass a HEX value or a RGB / RGBA value. 
+
+### [View the demo](http://samchun.github.io/scrolling-gradient/)
